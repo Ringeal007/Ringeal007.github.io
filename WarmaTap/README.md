@@ -1,3 +1,7 @@
+本WarmaTap为搬运版，仅用于个人测试。
+原链接：https://github.com/MonianHello/WarmaTap
+以下为原链接中的README.md：
+----------------
 
 # Warmatap   
 
@@ -29,3 +33,4 @@ http://exittunes.com/license/
 my Blog:[http://124.223.50.254/warmatap/](http://124.223.50.254/warmatap/)
 
 GithubPage:[https://monianhello.github.io/WarmaTap/](https://monianhello.github.io/WarmaTap/)
+----------------
