@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参加核酸检测教学</title>
+</head>
+
+<body>
+
+    <div style="
+		text-align: center; 
+		max-width: 1080px; 
+	    max-height: 2400px; 
+	    width: auto; 
+	    height: auto; 
+	    margin: 20px auto;
+	">
+	
+	<img src="hsjct1.jpg" alt="图(1)" width="360" height="800">
+	
+<style type="text/css">
+   .wrapper {position: relative;}
+   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+</style>
+
+<div class="wrapper">
+   <p id="text">
+#小程序://腾讯健康/1ZhU7HCRZiePN8i<br />
+<br />
+↑↑↑↑↑↑<br />
+复制到微信后<br />
+点击上方蓝色链接
+   </p>
+   <textarea id="input">这是幕后黑手</textarea>
+   <button onclick="copyText()">点击我一键复制</button>
+</div>
+
+<script type="text/javascript">
+    function copyText() {
+      var text = document.getElementById("text").innerText;
+      var input = document.getElementById("input");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("复制成功");
+    }
+  </script>
+
+<!--
+作者：holy俊辉
+链接：https://www.jianshu.com/p/3a3d2981a092
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+-->
+	
+	</div>
+	
+	    <div style="
+		text-align: center; 
+		max-width: 1080px; 
+	    max-height: 2400px; 
+	    width: auto; 
+	    height: auto; 
+	    margin: 20px auto;
+	">
+	
+	<img src="hsjct2.jpg" alt="图(2)" width="360" height="800">
+	
+	</div>
+	
+	    <div style="
+		text-align: center; 
+		max-width: 1080px; 
+	    max-height: 2400px; 
+	    width: auto; 
+	    height: auto; 
+	    margin: 20px auto;
+	">
+	
+	<img src="hsjct3.jpg" alt="图(3)" width="360" height="800">
+	
+	</div>
+
+</body>
