@@ -32,6 +32,7 @@
 	<meta name="theme-color" content="#ffffff" />
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 </head>
 
 <!--
@@ -128,21 +129,21 @@
 			<h4 style="text-indent: initial;">我的联系方式和社交平台账户：</h4>
 
 			<p>
-				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><copy-button target-element=".QQ_Number">点我复制</copy-button>
+				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".QQ_Number">点我复制</button>
 				<br /><emspd />（<a target="_blank" href="https://qm.qq.com/q/Mfz8p3Hwau">点击此链接添加我为QQ好友</a>）
 			</p>
 
 			<p>
-				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><copy-button target-element=".Wechat_ID">点我复制</copy-button>
+				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".Wechat_ID">点我复制</button>
 			</p>
 
 			<p>
-				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><copy-button target-element=".bilibili_UID">点我复制</copy-button>
+				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".bilibili_UID">点我复制</button>
 				<br /><emspd />（<a target="_blank" href="https://space.bilibili.com/523064402">点击此链接访问我的哔哩哔哩个人空间</a>）
 			</p>
 
 			<p>
-				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><copy-button target-element=".Steam_Friend_Code">点我复制</copy-button>
+				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".Steam_Friend_Code">点我复制</button>
 				<br /><emspd />（<a target="_blank" href="https://steamcommunity.com/id/Ringeal007/">点击此链接查看我的Steam个人资料</a>）
 			</p>
 
@@ -181,7 +182,14 @@
 
 
 	<style>
+		h2 {
+			background-color: slategray;
+			text-align: center;
+			color: ivory;
+			padding: 0.5em;
+		}
 
+		/* <emsp> */
 		emsp {
 			display: inline;
 			margin-left: 1em;
@@ -192,18 +200,17 @@
 			margin-left: 2em;
 		}
 
-		h2 {
-			background-color: slategray;
-			text-align: center;
-			color: ivory;
-			padding: 0.5em;
-		}
+		/* </emsp> */
 
+		/* .copy-button start*/
+		/* .copy-button end*/
 	</style>
 
 
 
-	<script src='https://cdn.jsdelivr.net/gh/Ringeal007/copy-button/bundled.min.js'></script>
+	<script>
+		new ClipboardJS('.copy-button');
+	</script>
 
 	<script>
 		const text = pangu.spacing("當你凝視著bug，bug也凝視著你");
@@ -218,8 +225,8 @@
 			pangu.autoSpacingPage();
 		});
 	</script>
-	<!-- 盤古之白万岁！ -->
-	<!-- 你可能会注意到我的网页源代码下方总会有一个空行，这个空行叫做“神之一行”，如果删除“神之一行”，我的代码会崩溃，进一步导致世界的「崩坏」，世界末日会来临，所以，千万不要删除“神之一行”！！！ -->
+	<!-- 「盤古之白」万岁！ -->
+	<!-- 你可能会注意到我的网页源代码下方总会有一个空行，这个空行叫做「神之一行」，如果删除「神之一行」，我的代码会崩溃，进一步导致世界的「崩坏」，世界末日会来临，所以，千万不要删除「神之一行」！！！ -->
 
 
 
