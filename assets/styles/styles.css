@@ -1,0 +1,27 @@
+h2 {
+	background-color: slategray;
+	text-align: center;
+	color: ivory;
+	padding: 0.5em;
+}
+
+/* <emsp> */
+emsp {
+	display: inline;
+	margin-left: 1em;
+}
+
+emspd {
+	display: inline;
+	margin-left: 2em;
+}
+/* </emsp> */
+
+/* .copy-button start*/
+.copy-button {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+/* .copy-button end*/
