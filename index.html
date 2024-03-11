@@ -133,21 +133,21 @@
 			<h4 style="text-indent: initial;">我的联系方式和社交平台账户：</h4>
 
 			<p>
-				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".QQ_Number">点我复制</button>
+				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".QQ_Number">点我复制</button>
 				<br /><emspd />（<a href="https://qm.qq.com/q/Mfz8p3Hwau" target="_blank" rel="noopener noreferrer">点击此链接添加我为QQ好友</a>）
 			</p>
 
 			<p>
-				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".Wechat_ID">点我复制</button>
+				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Wechat_ID">点我复制</button>
 			</p>
 
 			<p>
-				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".bilibili_UID">点我复制</button>
+				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".bilibili_UID">点我复制</button>
 				<br /><emspd />（<a href="https://space.bilibili.com/523064402" target="_blank" rel="noopener noreferrer">点击此链接访问我的哔哩哔哩个人空间</a>）
 			</p>
 
 			<p>
-				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><button class="copy-button" type="button" data-clipboard-target=".Steam_Friend_Code">点我复制</button>
+				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Steam_Friend_Code">点我复制</button>
 				<br /><emspd />（<a href="https://steamcommunity.com/id/Ringeal007/" target="_blank" rel="noopener noreferrer">点击此链接查看我的Steam个人资料</a>）
 			</p>
 
@@ -195,33 +195,46 @@
 
 
 	<script>
-		//new ClipboardJS('.copy-button');
-		var clipboard = new ClipboardJS('.copy-button');
+		// 初始化ClipboardJS
+		var clipboard = new ClipboardJS('.c2cbd-btn');
+		// 创建一个Map来存储每个按钮的原始文本
+		var c2cbdBtnOriginalTexts = new Map();
 
 		clipboard.on('success', function (e) {
-			//e.clearSelection();
-
-			var originalText = e.trigger.textContent;
-			var successText;
-			if (e.action === 'cut') {
-				successText = e.trigger.getAttribute('data-cut-success-text') || '剪切成功';
-			} else {
-				successText = e.trigger.getAttribute('data-copy-success-text') || '复制成功';
+			// 获取按钮的原始文本，并存储到Map中
+			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
+				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.textContent);
 			}
-			e.trigger.textContent = successText;
+
+			// 根据操作类型（复制/剪切），选择相应的成功文本
+			var c2cbdSuccessText;
+			if (e.action === 'cut') {
+				c2cbdSuccessText = e.trigger.getAttribute('data-cut-success-text') || '剪切成功';
+			} else { // 默认为复制操作
+				c2cbdSuccessText = e.trigger.getAttribute('data-copy-success-text') || '复制成功';
+			}
+			e.trigger.textContent = c2cbdSuccessText;
 
 			setTimeout(function () {
-				e.trigger.textContent = originalText;
+				// 使用Map中存储的原始文本来恢复按钮文本
+				e.trigger.textContent = c2cbdBtnOriginalTexts.get(e.trigger);
+				// 清除选择
+				e.clearSelection();
 			}, 2000);
 		});
 
 		clipboard.on('error', function (e) {
-			var originalText = e.trigger.textContent;
-			var errorText = e.trigger.getAttribute('data-error-text') || '操作失败';
-			e.trigger.textContent = errorText;
+			// 获取按钮的原始文本，并存储到Map中
+			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
+				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.textContent);
+			}
+
+			var c2cbdErrorText = e.trigger.getAttribute('data-error-text') || '操作失败';
+			e.trigger.textContent = c2cbdErrorText;
 
 			setTimeout(function () {
-				e.trigger.textContent = originalText;
+				// 使用Map中存储的原始文本来恢复按钮文本
+				e.trigger.textContent = c2cbdBtnOriginalTexts.get(e.trigger);
 			}, 2000);
 		});
 	</script>
