@@ -195,7 +195,35 @@
 
 
 	<script>
-		new ClipboardJS('.copy-button');
+		//new ClipboardJS('.copy-button');
+		var clipboard = new ClipboardJS('.copy-button');
+
+		clipboard.on('success', function (e) {
+			//e.clearSelection();
+
+			var originalText = e.trigger.textContent;
+			var successText;
+			if (e.action === 'cut') {
+				successText = e.trigger.getAttribute('data-cut-success-text') || '剪切成功';
+			} else {
+				successText = e.trigger.getAttribute('data-copy-success-text') || '复制成功';
+			}
+			e.trigger.textContent = successText;
+
+			setTimeout(function () {
+				e.trigger.textContent = originalText;
+			}, 2000);
+		});
+
+		clipboard.on('error', function (e) {
+			var originalText = e.trigger.textContent;
+			var errorText = e.trigger.getAttribute('data-error-text') || '操作失败';
+			e.trigger.textContent = errorText;
+
+			setTimeout(function () {
+				e.trigger.textContent = originalText;
+			}, 2000);
+		});
 	</script>
 
 	<script>
