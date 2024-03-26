@@ -2,25 +2,24 @@ h2 {
 	background-color: slategray;
 	text-align: center;
 	color: ivory;
-	padding: 0.5em;
+	padding: 0.5rem;
 }
 
 /* <emsp> */
 emsp {
 	display: inline;
-	margin-left: 1em;
+	margin-left: 1rem;
 }
 
 emspd {
 	display: inline;
-	margin-left: 2em;
+	margin-left: 2rem;
 }
 /* </emsp> */
 
 /* .c2cbd-btn start */
 .c2cbd-btn {
 	user-select: none;
-
 	display: inline-block;
 	outline: 0;
 	cursor: pointer;
