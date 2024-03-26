@@ -20,6 +20,7 @@ emspd {
 /* .c2cbd-btn start */
 .c2cbd-btn {
 	user-select: none;
+
 	display: inline-block;
 	outline: 0;
 	cursor: pointer;
