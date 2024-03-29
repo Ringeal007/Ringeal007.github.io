@@ -132,22 +132,22 @@
 			<h4 style="text-indent: initial;">我的联系方式和社交平台账户：</h4>
 
 			<p>
-				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".QQ_Number"><span class="emoji">&#x1F4CB;</span>点我复制</button>
+				我的常用QQ号：<span class="QQ_Number">3412601138</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".QQ_Number"><span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>点我复制</button>
 				<br /><emspd />（<a href="https://qm.qq.com/q/Mfz8p3Hwau" target="_blank" rel="noopener noreferrer"><span class="emoji">&#x1F517;</span>点击此链接添加我为QQ好友</a>）
 			</p>
 
 			<p>
-				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Wechat_ID"><span class="emoji">&#x1F4CB;</span>点我复制</button>
+				我的常用微信号：<span class="Wechat_ID">Ringeal007</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Wechat_ID"><span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>点我复制</button>
 			</p>
 
 			<p>
-				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".bilibili_UID"><span class="emoji">&#x1F4CB;</span>点我复制</button>
+				我的哔哩哔哩UID：<span class="bilibili_UID">523064402</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".bilibili_UID"><span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>点我复制</button>
 				<br /><emspd />（<a href="https://space.bilibili.com/523064402" target="_blank" rel="noopener noreferrer"><span class="emoji">&#x1F517;</span>点击此链接访问我的哔哩哔哩个人空间</a>）
 			</p>
 
 			<p>
-				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Steam_Friend_Code"><span class="emoji">&#x1F4CB;</span>点我复制</button>
-				<br /><emspd />（<a href="https://steamcommunity.com/id/Ringeal007/" target="_blank" rel="noopener noreferrer"><span class="emoji">&#x1F517;</span>点击此链接查看我的Steam个人资料</a>）
+				我的Steam好友代码：<span class="Steam_Friend_Code">1266272678</span><emspd /><button class="c2cbd-btn" type="button" data-clipboard-target=".Steam_Friend_Code"><span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>点我复制</button>
+				<br /><emspd />（<a href="https://steamcommunity.com/id/Ringeal007" target="_blank" rel="noopener noreferrer"><span class="emoji">&#x1F517;</span>点击此链接查看我的Steam个人资料</a>）
 			</p>
 
 		</div>
@@ -211,9 +211,9 @@
 			// 根据操作类型（复制/剪切），选择相应的成功文本
 			var c2cbdSuccessText;
 			if (e.action === 'cut') {
-				c2cbdSuccessText = e.trigger.getAttribute('data-cut-success-text') || '<span class="emoji">&#x2702;</span>剪切成功';
+				c2cbdSuccessText = e.trigger.getAttribute('data-cut-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x2702;</span>剪切成功';
 			} else { // 默认为复制操作
-				c2cbdSuccessText = e.trigger.getAttribute('data-copy-success-text') || '<span class="emoji">&#x1F4CB;</span>复制成功';
+				c2cbdSuccessText = e.trigger.getAttribute('data-copy-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>复制成功';
 			}
 			e.trigger.innerHTML = c2cbdSuccessText;
 
@@ -231,7 +231,7 @@
 				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.innerHTML);
 			}
 
-			var c2cbdErrorText = e.trigger.getAttribute('data-error-text') || '<span class="emoji">&#x274C;</span>操作失败';
+			var c2cbdErrorText = e.trigger.getAttribute('data-error-text') || '<span class="c2cbd-btn-emoji emoji">&#x274C;</span>操作失败';
 			e.trigger.innerHTML = c2cbdErrorText;
 
 			setTimeout(function () {
