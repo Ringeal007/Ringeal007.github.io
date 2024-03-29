@@ -213,7 +213,7 @@
 			if (e.action === 'cut') {
 				c2cbdSuccessText = e.trigger.getAttribute('data-cut-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x2702;</span>剪切成功';
 			} else { // 默认为复制操作
-				c2cbdSuccessText = e.trigger.getAttribute('data-copy-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x1F4CB;</span>复制成功';
+				c2cbdSuccessText = e.trigger.getAttribute('data-copy-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x2705;</span>复制成功';
 			}
 			e.trigger.innerHTML = c2cbdSuccessText;
 
