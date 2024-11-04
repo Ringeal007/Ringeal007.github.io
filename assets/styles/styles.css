@@ -17,6 +17,11 @@ emspd {
 }
 /* </emsp> */
 
+.text-content {
+	margin: auto 3.82%;
+	text-indent: 2rem;
+}
+
 /* .c2cbd-btn start */
 .c2cbd-btn {
 	user-select: none;
