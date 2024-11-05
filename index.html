@@ -46,6 +46,7 @@
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+	<!-- 「盤古之白」万岁！ -->
 </head>
 
 <!--
@@ -215,13 +216,13 @@
 
 
 	<script>
-		// 初始化ClipboardJS
+		// 初始化 clipboard.js
 		var clipboard = new ClipboardJS('.c2cbd-btn');
-		// 创建一个Map来存储每个按钮的原始文本
+		// 创建一个 Map 来存储每个按钮的原始文本
 		var c2cbdBtnOriginalTexts = new Map();
 
 		clipboard.on('success', function (e) {
-			// 获取按钮的原始文本，并存储到Map中
+			// 获取按钮的原始文本，并存储到 Map 中
 			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
 				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.innerHTML);
 			}
@@ -244,7 +245,7 @@
 		});
 
 		clipboard.on('error', function (e) {
-			// 获取按钮的原始文本，并存储到Map中
+			// 获取按钮的原始文本，并存储到 Map 中
 			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
 				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.innerHTML);
 			}
