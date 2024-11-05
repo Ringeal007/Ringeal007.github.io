@@ -67,7 +67,7 @@ emspd {
 	/* 暂时不懂这三行代码具体效果和含义，暂且先这么用，作为临时方案。 */
 	margin-left: auto;
 	position: absolute;
-	right: 2rem;
+	right: 2.5rem;
 }
 
 .c2cbd-btn:hover {
