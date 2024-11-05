@@ -209,6 +209,11 @@
 
 
 
+	<script src="/assets/scripts/clipboard.features.js"></script>
+	<script src="/assets/scripts/pangu.features.js"></script>
+
+
+
 	<style>
 
 	</style>
@@ -216,64 +221,8 @@
 
 
 	<script>
-		// 初始化 clipboard.js
-		var clipboard = new ClipboardJS('.c2cbd-btn');
-		// 创建一个 Map 来存储每个按钮的原始文本
-		var c2cbdBtnOriginalTexts = new Map();
 
-		clipboard.on('success', function (e) {
-			// 获取按钮的原始文本，并存储到 Map 中
-			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
-				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.innerHTML);
-			}
-
-			// 根据操作类型（复制/剪切），选择相应的成功文本
-			var c2cbdSuccessTexts;
-			if (e.action === 'cut') {
-				c2cbdSuccessTexts = e.trigger.getAttribute('data-cut-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x2702;</span>剪切成功';
-			} else { // 默认为复制操作
-				c2cbdSuccessTexts = e.trigger.getAttribute('data-copy-success-text') || '<span class="c2cbd-btn-emoji emoji">&#x2705;</span>复制成功';
-			}
-			e.trigger.innerHTML = c2cbdSuccessTexts;
-
-			setTimeout(function () {
-				// 使用Map中存储的原始文本来恢复按钮文本
-				e.trigger.innerHTML = c2cbdBtnOriginalTexts.get(e.trigger);
-				// 清除选择
-				e.clearSelection();
-			}, 2000);
-		});
-
-		clipboard.on('error', function (e) {
-			// 获取按钮的原始文本，并存储到 Map 中
-			if (!c2cbdBtnOriginalTexts.has(e.trigger)) {
-				c2cbdBtnOriginalTexts.set(e.trigger, e.trigger.innerHTML);
-			}
-
-			var c2cbdErrorTexts = e.trigger.getAttribute('data-error-text') || '<span class="c2cbd-btn-emoji emoji">&#x274C;</span>操作失败';
-			e.trigger.innerHTML = c2cbdErrorTexts;
-
-			setTimeout(function () {
-				// 使用Map中存储的原始文本来恢复按钮文本
-				e.trigger.innerHTML = c2cbdBtnOriginalTexts.get(e.trigger);
-			}, 2000);
-		});
 	</script>
-
-	<script>
-		const text = pangu.spacing("當你凝視著bug，bug也凝視著你");
-		// text = '當你凝視著 bug，bug 也凝視著你'
-
-		pangu.spacingElementById('main');
-		pangu.spacingElementByClassName('comment');
-		pangu.spacingElementByTagName('p');
-
-		document.addEventListener('DOMContentLoaded', () => {
-			// listen to any DOM change and automatically perform spacing via MutationObserver()
-			pangu.autoSpacingPage();
-		});
-	</script>
-	<!-- 「盤古之白」万岁！ -->
 	<!-- 你可能会注意到我的网页源代码下方总会有一个空行，这个空行叫做「神之一行」，如果删除「神之一行」，我的代码会崩溃，进一步导致世界的「崩坏」，世界末日会来临，所以，千万不要删除「神之一行」！！！ -->
 
 
