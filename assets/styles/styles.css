@@ -1,3 +1,7 @@
+:root {
+	--animate-delay: 0.5s;
+}
+
 h2 {
 	background-color: slategray;
 	text-align: center;
