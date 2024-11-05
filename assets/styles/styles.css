@@ -17,9 +17,30 @@ emspd {
 }
 /* </emsp> */
 
+.header {
+	background-color: silver;
+	text-align: center;
+	padding: 1rem;
+}
+
+.article-content {
+	background-color: whitesmoke;
+	max-width: 61.80rem;
+	margin: auto;
+	padding: 0.5rem;
+	line-height: 1.5;
+}
+
 .text-content {
+	background-color: whitesmoke;
+	/* 为了优化动画效果，让文字在浮现的过程中有一块背景板，防止和下面的标题和文字重叠，我才加上的这个属性。 */
+	/* 不过貌似没啥用。(((φ(◎ロ◎;)φ))) */
 	margin: auto 3.82%;
 	text-indent: 2rem;
+}
+
+.text-content h4 {
+	text-indent: initial;
 }
 
 /* .c2cbd-btn start */
