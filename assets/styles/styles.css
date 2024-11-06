@@ -43,6 +43,14 @@ emspd {
 	text-indent: initial;
 }
 
+.footer {
+	background-color: silver;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: small;
+	line-height: 0.8;
+}
+
 /* .c2cbd-btn start */
 .c2cbd-btn {
 	display: inline-block;
