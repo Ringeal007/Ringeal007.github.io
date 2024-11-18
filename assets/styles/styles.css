@@ -61,7 +61,7 @@ emspd {
 	color: #3B3B3B;
 	cursor: pointer;
 	display: inline-block;
-	font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 16px;
 	font-weight: 600;
 	line-height: normal;
@@ -76,25 +76,27 @@ emspd {
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
+	/*
 	width: 100%;
+	*/
 	will-change: transform;
-  }
-  
-  .c2cbd-btn:disabled {
+}
+
+.c2cbd-btn:disabled {
 	pointer-events: none;
-  }
-  
-  .c2cbd-btn:hover {
+}
+
+.c2cbd-btn:hover {
 	color: #fff;
 	background-color: #1A1A1A;
 	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
 	transform: translateY(-2px);
-  }
-  
-  .c2cbd-btn:active {
+}
+
+.c2cbd-btn:active {
 	box-shadow: none;
 	transform: translateY(0);
-  }
+}
 /* .c2cbd-btn end */
 
 /* .emoji start */
