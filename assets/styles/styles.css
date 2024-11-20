@@ -70,9 +70,10 @@ emspd {
 	transition: 0.15s ease;
 	cursor: pointer;
 
+	display: inline-block;
 	text-align: center;
 	user-select: none;
-	margin-top: -4px;
+	margin-top: 0;
 	margin-bottom: 0.8rem;
 	float: right;
 	clear: both;
