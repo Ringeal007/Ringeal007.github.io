@@ -18,6 +18,30 @@ emspd {
 }
 /* </emsp> */
 
+.bottom-edge-gradient {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 4rem;
+
+	background: rgb(255, 255, 255);
+	/*
+	background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	*/
+	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	/*
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+	*/
+
+	/*
+	background: #ffffff;
+	background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%);
+	background: -webkit-linear-gradient(90deg, #ffffff 0%, #ffffff 50%);
+	background: -moz-linear-gradient(90deg, #ffffff 0%, #ffffff 50%);
+	*/
+}
+
 .header {
 	background-color: silver;
 	text-align: center;
