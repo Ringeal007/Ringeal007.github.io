@@ -118,3 +118,16 @@ emspd {
 	width: 1rem;
 }
 /* .emoji end */
+
+/* .temp-- start */
+.temp--001 {
+	text-align: center;
+	text-indent: initial;
+}
+
+.temp--002 {
+	text-align: center;
+	text-indent: initial;
+	font-size: larger;
+}
+/* .temp-- end */
