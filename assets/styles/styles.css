@@ -130,4 +130,13 @@ emspd {
 	text-indent: initial;
 	font-size: larger;
 }
+
+.temp--003 {
+	width: 13rem;
+	height: 13rem;
+}
+
+.temp--004 {
+	background-color: #FEFEFE;
+}
 /* .temp-- end */
