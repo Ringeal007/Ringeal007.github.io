@@ -143,4 +143,10 @@ emspd {
 .temp--005 {
 	margin: auto 4rem;
 }
+
+.temp--006 {
+	text-align: center;
+	text-indent: initial;
+	font-size: xxx-large;
+}
 /* .temp-- end */
