@@ -139,4 +139,8 @@ emspd {
 .temp--004 {
 	background-color: #FEFEFE;
 }
+
+.temp--005 {
+	margin: auto 4rem;
+}
 /* .temp-- end */
