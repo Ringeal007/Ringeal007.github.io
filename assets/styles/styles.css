@@ -134,6 +134,7 @@ emspd {
 .temp--003 {
 	width: 13rem;
 	height: 13rem;
+	border-radius: 50%;
 }
 
 .temp--004 {
