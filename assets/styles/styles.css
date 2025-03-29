@@ -48,6 +48,12 @@ emspd {
 	padding: 1rem;
 }
 
+.header-image img {
+	width: 13rem;
+	height: 13rem;
+	border-radius: 50%;
+}
+
 .article-content {
 	background-color: whitesmoke;
 	max-width: 61.80rem;
@@ -129,12 +135,6 @@ emspd {
 	text-align: center;
 	text-indent: initial;
 	font-size: larger;
-}
-
-.temp--003 {
-	width: 13rem;
-	height: 13rem;
-	border-radius: 50%;
 }
 
 .temp--004 {
