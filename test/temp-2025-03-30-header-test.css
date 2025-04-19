@@ -44,8 +44,25 @@ emspd {
 
 .header {
 	background-color: silver;
-	text-align: center;
 	padding: 1rem;
+}
+
+.header-image {
+	display: inline-block;
+}
+
+.header h1 {
+	display: inline-block;
+	text-align: center;
+	height: max-content;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.temp--007 {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header-image img {
