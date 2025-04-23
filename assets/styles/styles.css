@@ -44,14 +44,38 @@ emspd {
 
 .header {
 	background-color: silver;
-	text-align: center;
 	padding: 1rem;
+}
+
+.header-flex-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 40rem) {
+	.header-flex-content {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .header-image img {
 	width: 13rem;
 	height: 13rem;
 	border-radius: 50%;
+}
+
+.header h1 {
+	text-align: center;
+	margin-left: 1rem;
+}
+
+@media (max-width: 40rem) {
+	.header h1 {
+		text-align: center;
+		margin-top: 1rem;
+	}
 }
 
 .article-content {
