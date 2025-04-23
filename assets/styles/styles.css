@@ -47,6 +47,10 @@ emspd {
 	padding: 1rem;
 }
 
+.header-content {
+	text-align: center;
+}
+
 .header-flex-content {
 	display: flex;
 	align-items: center;
@@ -66,13 +70,13 @@ emspd {
 	border-radius: 50%;
 }
 
-.header h1 {
+.header-flex-content h1 {
 	text-align: center;
 	margin-left: 1rem;
 }
 
 @media (max-width: 40rem) {
-	.header h1 {
+	.header-flex-content h1 {
 		text-align: center;
 		margin-top: 1rem;
 	}
