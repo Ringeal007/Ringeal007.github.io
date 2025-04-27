@@ -85,7 +85,8 @@ emspd {
 .article-content {
 	background-color: whitesmoke;
 	max-width: 61.80rem;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0.5rem;
 	line-height: 1.5;
 }
@@ -177,5 +178,17 @@ emspd {
 	text-align: center;
 	text-indent: initial;
 	font-size: xxx-large;
+}
+
+.temp--007 {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-indent: initial;
+}
+
+.temp--007 img {
+	width: 90%;
+	height: auto;
 }
 /* .temp-- end */
