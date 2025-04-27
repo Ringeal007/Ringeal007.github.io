@@ -12,50 +12,64 @@
 		<input type="range" oninput="this.parentNode.style.setProperty('--pos', this.value / 100)">
 		<img src="https://i0.hdslb.com/bfs/article/ef7626ae4eb51d6ec8139f133cd2281f523064402.jpg">
 	</div>
-	
+	<!-- 学习 Wrapper 和 Container 的区别！！！ -->
+	<!-- 原创链接： https://segmentfault.com/a/1190000044064219 -->
+
+	<!-- 新增专用容器 -->
+	<div class="img-diff-wrapper">
+		<div class="img-diff">
+			<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150635233.png">
+			<input type="range" oninput="this.parentNode.style.setProperty('--pos', this.value / 100)">
+			<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150717831.png">
+		</div>
+	</div>
+
 	<style>
-	body {
-		display: flex; /* 暂时保留原有居中方案 */
-	}
-	
-	.img-diff { /* 原.wrap */
-		display: inline-flex;
-		position: relative;
-		margin: 50px auto;
-	}
-	
-	.img-diff [type=range] { /* 增加作用域限定 */
-		margin: 0;
-		-webkit-appearance: none;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background: none;
-		overflow: hidden;
-	}
-	
-	.img-diff [type=range]::-webkit-slider-runnable-track { /* 增加作用域限定 */
-		background-color: transparent;
-		height: 100%;
-		cursor: ew-resize;
-	}
-	
-	.img-diff [type=range]::-webkit-slider-thumb { /* 增加作用域限定 */
-		-webkit-appearance: none;
-		width: 4px;
-		height: 100%;
-		background-color: #18a0fb;
-	}
-	
-	.img-diff img { /* 增加作用域限定 */
-		display: block;
-		width: 600px;
-	}
-	
-	.img-diff img:first-of-type { /* 增加作用域限定 */
-		position: absolute;
-		clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
-	}
+		/* 新增容器（唯一的结构改动） */
+		.img-diff-wrapper {
+			display: flex;
+			min-height: 100vh;
+		}
+
+		/* 以下仅修改类名，属性值全部保持原样 */
+		.img-diff {
+			display: inline-flex;
+			position: relative;
+			margin: 50px auto;
+		}
+
+		.img-diff [type=range] {
+			margin: 0;
+			-webkit-appearance: none;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: none;
+			overflow: hidden;
+		}
+
+		.img-diff [type=range]::-webkit-slider-runnable-track {
+			background-color: transparent;
+			height: 100%;
+			cursor: ew-resize;
+		}
+
+		.img-diff [type=range]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			width: 4px;
+			height: 100%;
+			background-color: #18a0fb;
+		}
+
+		.img-diff img {
+			display: block;
+			width: 600px;
+		}
+
+		.img-diff img:first-of-type {
+			position: absolute;
+			clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
+		}
 	</style>
 
 </body>
