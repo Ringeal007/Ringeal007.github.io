@@ -7,55 +7,55 @@
 </head>
 <body>
 
-	<div class="wrap">
+	<div class="img-diff">
 		<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150635233.png">
 		<input type="range" oninput="this.parentNode.style.setProperty('--pos', this.value / 100)">
 		<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150717831.png">
 	</div>
-
+	
 	<style>
-		body {
-			display: flex
-		}
-
-		.wrap {
-			display: inline-flex;
-			position: relative;
-			margin: 50px auto;
-		}
-
-		[type=range] {
-			margin: 0;
-			-webkit-appearance: none;
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			background: none;
-			overflow: hidden;
-		}
-
-		::-webkit-slider-runnable-track {
-			background-color: transparent;
-			height: 100%;
-			cursor: ew-resize;
-		}
-
-		::-webkit-slider-thumb {
-			-webkit-appearance: none;
-			width: 4px;
-			height: 100%;
-			background-color: #18a0fb;
-		}
-
-		img {
-			display: block;
-			width: 600px;
-		}
-
-		img:first-of-type {
-			position: absolute;
-			clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
-		}
+	body {
+		display: flex; /* 暂时保留原有居中方案 */
+	}
+	
+	.img-diff { /* 原.wrap */
+		display: inline-flex;
+		position: relative;
+		margin: 50px auto;
+	}
+	
+	.img-diff [type=range] { /* 增加作用域限定 */
+		margin: 0;
+		-webkit-appearance: none;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: none;
+		overflow: hidden;
+	}
+	
+	.img-diff [type=range]::-webkit-slider-runnable-track { /* 增加作用域限定 */
+		background-color: transparent;
+		height: 100%;
+		cursor: ew-resize;
+	}
+	
+	.img-diff [type=range]::-webkit-slider-thumb { /* 增加作用域限定 */
+		-webkit-appearance: none;
+		width: 4px;
+		height: 100%;
+		background-color: #18a0fb;
+	}
+	
+	.img-diff img { /* 增加作用域限定 */
+		display: block;
+		width: 600px;
+	}
+	
+	.img-diff img:first-of-type { /* 增加作用域限定 */
+		position: absolute;
+		clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
+	}
 	</style>
 
 </body>
