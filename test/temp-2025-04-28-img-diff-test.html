@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>img-diff</title>
+</head>
+<body>
+
+	<div class="wrap">
+		<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150635233.png">
+		<input type="range" oninput="this.parentNode.style.setProperty('--pos', this.value / 100)">
+		<img src="https://raw.githubusercontent.com/XboxYan/tuchuang/main/img/image-20230715150717831.png">
+	</div>
+
+	<style>
+		body {
+			display: flex
+		}
+
+		.wrap {
+			display: inline-flex;
+			position: relative;
+			margin: 50px auto;
+		}
+
+		[type=range] {
+			margin: 0;
+			-webkit-appearance: none;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: none;
+			overflow: hidden;
+		}
+
+		::-webkit-slider-runnable-track {
+			background-color: transparent;
+			height: 100%;
+			cursor: ew-resize;
+		}
+
+		::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			width: 4px;
+			height: 100%;
+			background-color: #18a0fb;
+		}
+
+		img {
+			display: block;
+			width: 600px;
+		}
+
+		img:first-of-type {
+			position: absolute;
+			clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
+		}
+	</style>
+
+</body>
+</html>
