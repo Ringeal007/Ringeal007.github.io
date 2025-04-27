@@ -185,7 +185,7 @@ emspd {
 
 .img-diff img {
 	display: block;
-	width: 600px;
+	width: 100%;
 }
 
 .img-diff img:first-of-type {
@@ -228,6 +228,7 @@ emspd {
 }
 
 .temp--007 {
+	/* 刚出场就废弃 */
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -235,7 +236,20 @@ emspd {
 }
 
 .temp--007 img {
+	/* 刚出场就废弃 */
 	width: 90%;
 	height: auto;
+}
+
+.temp--008 img {
+	max-width: 90%;
+	/*
+	这个 max-width 本来是要用在 .img-diff 上的，
+	但是直接使用后会导致一些错误，
+	所以现在暂停使用。
+	在 .img-diff-wrapper 上也是一样的效果。
+	可能要对所有带 .img-diff 的选择器都应用一遍 max-width？
+	因为 width 本身在 .img-diff 里就被定义了两三次左右。
+	*/
 }
 /* .temp-- end */
