@@ -5,7 +5,9 @@
 <body>
 
 	<div class="header">
+		<!--
 		<div class="header-flex-content">
+		-->
 
 			<div class="header-image animate__animated animate__fadeInLeftBig animate__faster">
 				<a href="https://imgse.com/i/pAs0zWQ" target="_blank" rel="noopener noreferrer">
@@ -15,43 +17,41 @@
 
 			<h1 class="animate__animated animate__fadeInRightBig animate__faster">Ringeal007<br />的个人网站</h1>
 
+		<!--
 		</div>
+		-->
 	</div>
 
 	<style>
 		.header {
 			background-color: silver;
 			padding: 1rem;
-		}
-	
-		.header-flex-content {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
-	
+
 		@media (max-width: 40rem) {
-			.header-flex-content {
+			.header {
 				flex-direction: column;
-				align-items: center;
 			}
 		}
-	
+
 		.header-image img {
 			width: 13rem;
 			height: 13rem;
 			border-radius: 50%;
 		}
-	
+
 		.header h1 {
 			text-align: center;
 			margin-left: 1rem;
 		}
-	
+
 		@media (max-width: 40rem) {
 			.header h1 {
-				text-align: center;
 				margin-top: 1rem;
+				margin-left: 0;
 			}
 		}
 	</style>
