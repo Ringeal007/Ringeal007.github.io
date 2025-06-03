@@ -192,7 +192,6 @@ emspd {
 	position: absolute;
 	clip-path: inset(0 calc(100% - var(--pos, .5) * 100%) 0 0)
 }
-
 /* .img-diff end */
 
 /* .emoji start */
