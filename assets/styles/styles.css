@@ -183,6 +183,13 @@ emspd {
 	white-space: nowrap;
 }
 
+@media (max-width: 40rem) {
+	.c2cbd-btn-line > span:first-child {
+		margin-left: 2rem;
+		white-space: initial;
+	}
+}
+
 .c2cbd-btn .emoji {
 	margin-left: -0.4rem;
 }
