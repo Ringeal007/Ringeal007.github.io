@@ -47,41 +47,41 @@ emspd {
 	padding: 1rem;
 }
 
-.header-content {
+.header-wrapper-block {
 	text-align: center;
 }
 
-.header-flex-content {
+.header-wrapper-flex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 @media (max-width: 40rem) {
-	.header-flex-content {
+	.header-wrapper-flex {
 		flex-direction: column;
 	}
 }
 
-.header-image img {
+.avatars img {
 	width: 13rem;
 	height: 13rem;
 	border-radius: 50%;
 }
 
-.header-flex-content h1 {
+.header-wrapper-flex h1 {
 	text-align: center;
 	margin-left: 1rem;
 }
 
 @media (max-width: 40rem) {
-	.header-flex-content h1 {
+	.header-wrapper-flex h1 {
 		margin-top: 1rem;
 		margin-left: 0;
 	}
 }
 
-.article-content {
+.container.article {
 	background-color: whitesmoke;
 	max-width: 61.80rem;
 	margin-left: auto;
@@ -90,7 +90,7 @@ emspd {
 	line-height: 1.5;
 }
 
-.text-content {
+.container.text {
 	background-color: whitesmoke;
 	/* 为了优化动画效果，让文字在浮现的过程中有一块背景板，防止和下面的标题和文字重叠，我才加上的这个属性。 */
 	/* 不过貌似没啥用。(((φ(◎ロ◎;)φ))) */
@@ -98,11 +98,15 @@ emspd {
 	text-indent: 2rem;
 }
 
-.text-content h4 {
+.container.text h4 {
 	text-indent: initial;
 }
 
-.footer {
+.container.contacts {
+	text-indent: initial;
+}
+
+.container.footer {
 	background-color: silver;
 	text-align: center;
 	padding: 0.8rem;
@@ -111,16 +115,36 @@ emspd {
 }
 
 /* .c2cbd-btn start */
+/* 来自 https://github.com/OpenRapid/winui3/blob/main/style.css */
+.c2cbd-btn {
+	background-color: rgb(251, 251, 251);
+	border-top: 1px solid rgb(229, 229, 229);
+	border-left: 1px solid rgb(229, 229, 229);
+	border-right: 1px solid rgb(229, 229, 229);
+	border-bottom: 1.3px solid rgb(204, 204, 204);
+	box-shadow: 0 0 0 rgb(204, 204, 204);
+	outline: none;
+	color: #1a1a1a;
+	user-select: none;
+	border-radius: 4px;
+	padding: 0 0.9375rem 0 0.9375rem;
+	height: 1.875rem;
+	font-size: 0.875rem;
+
+	margin-left: auto;
+	white-space: nowrap;
+}
+
+/* 这里是接下来要克服的难关！尝试在启用这个样式的情况下消除BUG！ */
 /* From Uiverse.io by elijahgummer */ 
+/*
 .c2cbd-btn {
 	font: inherit;
 	background-color: #f0f0f0;
 	border: 0;
 	color: #242424;
 	border-radius: 0.5em;
-	/*
-	font-size: 1.35rem;
-	*/
+	font-size: 0.875rem;
 	padding: 0.375em 1em;
 	font-weight: 600;
 	text-shadow: 0 0.0625em 0 #fff;
@@ -131,20 +155,38 @@ emspd {
 	display: inline-block;
 	text-align: center;
 	user-select: none;
-	margin-top: 0;
-	margin-bottom: -0.8rem;
-	float: right;
-	clear: both;
+}
+*/
+
+.c2cbd-btn:hover {
+	background-color: #F6F6F6;
+	/*transition: 0.2s;*/
 }
 
 .c2cbd-btn:active {
-	translate: 0 0.225em;
-	box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef, 0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede, 0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+	border-bottom: 1px solid rgb(229, 229, 229);
+	color: #616161;
+	/*transition: 0.2s;*/
+}
+
+.c2cbd-btn-line {
+	display: flex;
+	align-items: center;
+}
+
+.c2cbd-btn-line > span {
+	white-space: nowrap;
+}
+
+.c2cbd-btn-line > span:first-child {
+	margin-left: 2rem;
+	white-space: nowrap;
 }
 
 .c2cbd-btn .emoji {
-	margin-left: -4px;
+	margin-left: -0.4rem;
 }
+
 /* .c2cbd-btn end */
 
 /* .img-diff start */
