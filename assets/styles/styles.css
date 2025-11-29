@@ -243,6 +243,13 @@ emspd {
 }
 /* .img-diff end */
 
+/* .page-counter start */
+.page-counter {
+	margin-top: 0;
+	margin-bottom: -7px;
+}
+/* .page-counter end */
+
 /* .emoji start */
 .emoji {
 	width: 1rem;
@@ -266,7 +273,7 @@ emspd {
 }
 
 .temp--005 {
-	margin: auto 4rem;
+	margin: auto 2rem;
 }
 
 .temp--006 {
