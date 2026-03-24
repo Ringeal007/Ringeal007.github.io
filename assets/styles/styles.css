@@ -86,17 +86,17 @@ emspd {
 	line-height: 1.5;
 }
 
-.text {
-	margin: auto 3.82%;
-	text-indent: 2rem;
-}
-
-.text h2 {
+.article h2 {
 	background-color: slategray;
 	text-align: center;
 	color: ivory;
 	padding: 0.5rem;
 	clear: both;
+}
+
+.text {
+	margin: auto 3.82%;
+	text-indent: 2rem;
 }
 
 .text h4 {
